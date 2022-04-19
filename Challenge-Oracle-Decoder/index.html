@@ -14,11 +14,13 @@
     <header class="header">
       <img src="Vectorletra.png" alt="Traductor para Alura">     
     </header>
-    <main class="texto">      
-      <textarea class="ingrese-texto" placeholder="Ingrese el Texto" id="Textarea" ></textarea>
+    <main class="texto">
+      <img src="input.png" id="input" alt="Ingrese aquí su texto">
+      <textarea class="ingrese-texto" id="Textarea"></textarea>
     </main>
     <Aside class="codigo">
-      <p id="textocopiar"></p>
+      <img src="1.png" id="imagen1" alt="Traductor para Alura">
+      <p class="textocodigo" id="textocopiar"></p>
       <button class="button-copiar" type="button" id="copiar">Copiar</button>
     </Aside>
     <div class="boton1">
@@ -39,6 +41,11 @@
     var boton = document.getElementById("codificar");
     var boton2 = document.getElementById("decodificar");
     var boton3 = document.getElementById("copiar");
+    var input = document.getElementById("input");
+    var imagen1=document.getElementById("imagen1");
+
+    texto.style.visibility="hidden"
+    boton3.style.visibility="hidden"
 
     function codificar(e) {
       var codigo = "";
@@ -73,8 +80,9 @@
 
       }       
 
-      e.preventDefault();  
-      textocopiar.append(codigo);     
+      e.preventDefault();
+      textocopiar.append(codigo);
+      mostrarCodigo();    
 
     }
 
@@ -118,7 +126,8 @@
      
       e.preventDefault();
       textocopiar.append(codigo);
-      
+      mostrarCodigo();
+
     }
 
     function copiar() {
@@ -127,6 +136,21 @@
       //alert("el código ha sido copiado"); //<-como opción se puede lanzar una Alerta
     }    
 
+    function mostrarTexto(){
+
+      input.style.display= "none"
+      texto.style.visibility= "visible"
+
+    }
+
+    function mostrarCodigo(){
+
+      imagen1.style.display= "none";
+      boton3.style.visibility= "visible";
+
+    }
+
+    input.onclick= mostrarTexto;
     boton.onclick= codificar;
     boton2.onclick= decodificar;
     boton3.onclick= copiar;

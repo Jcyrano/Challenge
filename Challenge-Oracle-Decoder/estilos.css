@@ -4,7 +4,7 @@
 }
 
 body {
-  background-color: #E5E5E5;
+  background-color: #F1F3FA;
   font-family: 'Inter';
   font-style: normal;
   color: #0A3871;
@@ -28,18 +28,23 @@ body {
 }
 
 .texto {
-  min-height: 700px;
+  min-height: 354px;  
   grid-column: 2/4;
   grid-row: 2/3;
 }
 
 .codigo {  
   padding: 25px;  
-  min-height: 456px;
-  background-color: #FFFFFF;
+  min-height: 495px;  
+  max-width: 219px;
+  background-color: #F1F3FA;
   border-radius: 24px;
   grid-column: 4/5;
   grid-row: span 3;  
+}
+.textocodigo {
+  background-color: #FFFFFF;  
+  max-width: 219px;
 }
 .boton1{
   grid-row: 3/4;
@@ -64,8 +69,8 @@ body {
   justify-content: center;
   padding: 24px;
 
-  width: 336px;
-  height: 67px;
+  width: 219px;
+  height: 48px;
   
 
   /* Dark blue/dark-blue-300 */
@@ -91,8 +96,8 @@ body {
   justify-content: center;
   padding: 24px;
 
-  width: 328px;
-  height: 67px;
+  width: 219px;
+  height: 48px;
 
   /* Dark blue/dark-blue-300 */
   background: #0A3871;
@@ -119,8 +124,8 @@ body {
   justify-content: center;
   padding: 24px;
 
-  width: 328px;
-  height: 67px;
+  width: 219px;
+  height: 48px;
 
   /* Dark blue/dark-blue-300 */
   border: 1px solid #0A3871;
@@ -139,10 +144,10 @@ body {
 
 .ingrese-texto {
   height: 100%;
-  width: 100%;
+  width: 100%;  
   color: #0A3871;
-  background-color: #E5E5E5;
-  border: 1px solid #E5E5E5;
+  background-color: #F1F3FA;
+  border: 1px solid #F1F3FA;
   box-sizing: border-box;
 }
 
@@ -156,7 +161,8 @@ body {
     grid-column: 1/-1;
   }
   .codigo {  
-    min-height: 133px;  
+    min-height: 133px;
+    max-width: 768px;  
     grid-row: 4/5;
     grid-column: 1/-1
   }
@@ -171,6 +177,9 @@ body {
   .footer{
     grid-row: 5/6;
   }
+  .textocodigo {
+    max-width: fit-content;
+  }  
 }
 
 @media screen and (max-width: 375px) {
